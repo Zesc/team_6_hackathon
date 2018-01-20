@@ -1,0 +1,180 @@
+* {
+	box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Playfair Display Bold";
+  src: url("../../../../../projects/Fonts/Playfair_Display/PlayfairDisplay-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair Display Regular";
+  src: url("../../../../../projects/Fonts/Playfair_Display/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway Light";
+  src: url("../../../../../projects/Fonts/Raleway/Raleway-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway Thin";
+  src: url("../../../../../projects/Fonts/Raleway/Raleway-Thin.ttf") format("truetype");
+}
+
+.accordion {
+	max-width: 60rem;
+	border: 0.05rem solid black;
+}
+
+.accordion__item {
+	position: relative;
+}
+
+.accordion__panel {
+	display: flex;
+	flex-direction: row;
+	max-height: 0;
+	opacity: 0;
+	-webkit-transition: 0.25s ease-in-out;
+	-moz-transition: 0.25s ease-in-out;
+	-ms-transition: 0.25s ease-in-out;
+	-o-transition: 0.25s ease-in-out;
+	transition: 0.25s ease-in-out;
+}
+
+.accordion__panel * {
+	opacity: 0;
+	transition: 0.25s ease-in-out;
+}
+
+.accordion__panel-header {
+	font-family: "Playfair Display Bold";
+  font-size: 1.85rem;
+  line-height: 2rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem; 
+}
+
+.accordion__panel-item {
+	flex: 1;
+	font-family: "Raleway Light";
+	font-size: 1.15rem;
+	line-height: 1.618rem;
+}
+
+.accordion__panel-item img {
+	height: 0;
+	box-shadow: 0.15rem 0.15rem 0.65rem #a5a5a5;	
+}
+
+.accordion__panel-text {
+	line-height: 1.85rem;
+}
+
+.accordion__title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: "Playfair Display Regular";
+	font-size: 1.35rem;
+	line-height: 1.618rem;
+	padding: 1.25rem 2rem;
+	background: black;
+	border-bottom: 0.05rem groove white;
+	color: white;
+	-webkit-transition: 0.25s ease-in-out;
+	-moz-transition: 0.25s ease-in-out;
+	-ms-transition: 0.25s ease-in-out;
+	-o-transition: 0.25s ease-in-out;
+	transition: 0.25s ease-in-out;
+}
+
+.accordion input[type="checkbox"] {
+	-webkit-appearance: none;
+	position: absolute;
+	height: 100%;
+  width: 100%;
+	opacity: 0;
+  margin: 0;
+  max-height: 4.25rem;
+  z-index: 1;
+}
+
+.accordion input[type="checkbox"]:hover {
+	cursor: pointer;
+}
+
+.accordion input[type="checkbox"]:hover + .accordion__title {
+	background: #000000b3;
+}
+
+.accordion input[type="checkbox"]:checked + .accordion__title  + .accordion__panel * {
+	opacity: 1;
+}
+
+.accordion input[type="checkbox"]:checked + .accordion__title  + .accordion__panel .accordion__panel-item img {
+	height: 100%;
+}
+
+.accordion input[type="checkbox"]:checked + .accordion__title {
+	border-bottom: 0.25rem solid #ff058c;
+}
+
+.accordion input[type="checkbox"]:checked + .accordion__title + .accordion__panel {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	max-height: 15rem;
+	margin: 1rem;
+	padding: 1.5rem 6rem;
+	opacity: 1;
+	transform: scale(1,1);
+}
+
+.accordion input[type="checkbox"]:checked + .accordion__title > .arrow.left {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.arrow {
+	height: 1rem;
+	width: 1rem;
+	border: solid white;
+  border-width: 0 0.15rem 0.15rem 0;
+  display: inline-block;
+  padding: 0.15rem;
+  transition: 0.25s ease-in-out;
+}
+
+.left {
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  margin: 10rem auto 0;
+  padding: 3rem 0 0.5rem 1rem;
+  max-width: 60rem;
+  border-top: 0.5rem solid #ececec;
+}
+
+.section__description {
+	font-family: "Raleway Light";
+	font-size: 1.25rem;
+	line-height: 2.25rem;
+	margin-bottom: 2.5rem;
+}
+
+.section__title {
+  flex: 1;
+  width: 100%;
+	font-family: "Playfair Display Bold";
+	font-size: 3rem;
+	line-height: 3.618rem;
+	margin-bottom: 2.5rem;
+}
