@@ -65,6 +65,7 @@ p {
   display: block;
   line-height: 30px;
 }
+
 #disabled {
     background-color: #ABC0C8;
     color: white;
