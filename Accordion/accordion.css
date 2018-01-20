@@ -24,7 +24,6 @@
 
 .accordion {
 	max-width: 60rem;
-	border: 0.05rem solid black;
 }
 
 .accordion__item {
@@ -46,6 +45,15 @@
 .accordion__panel * {
 	opacity: 0;
 	transition: 0.25s ease-in-out;
+}
+
+.accordion__panel--black {
+	background: black;
+	color: white;
+}
+
+.accordion__panel--black .accordion__panel-header {
+	color: #18AFC7;
 }
 
 .accordion__panel-header {
@@ -90,6 +98,19 @@
 	transition: 0.25s ease-in-out;
 }
 
+.accordion__title--white--borderless {
+	background: white;
+	color: black;
+}
+
+.accordion__title--white--borderless .arrow.left {
+	border-color: #0000002e;	
+}
+
+.accordion__title-text {
+	margin-right: 1.5rem;
+}
+
 .accordion input[type="checkbox"] {
 	-webkit-appearance: none;
 	position: absolute;
@@ -109,6 +130,10 @@
 	background: #000000b3;
 }
 
+.accordion input[type="checkbox"]:hover + .accordion__title--white--borderless {
+	background: #0000001a;
+}
+
 .accordion input[type="checkbox"]:checked + .accordion__title  + .accordion__panel * {
 	opacity: 1;
 }
@@ -118,16 +143,15 @@
 }
 
 .accordion input[type="checkbox"]:checked + .accordion__title {
-	border-bottom: 0.25rem solid #ff058c;
+	border-bottom: 0.25rem solid #18AFC7;
 }
 
 .accordion input[type="checkbox"]:checked + .accordion__title + .accordion__panel {
 	position: relative;
 	display: flex;
 	flex-direction: row;
-	max-height: 15rem;
-	margin: 1rem;
-	padding: 1.5rem 6rem;
+	max-height: 18rem;
+	padding: 2.5rem 6rem;
 	opacity: 1;
 	transform: scale(1,1);
 }
@@ -135,6 +159,11 @@
 .accordion input[type="checkbox"]:checked + .accordion__title > .arrow.left {
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
+}
+
+.accordion input[type="checkbox"]:checked + .accordion__title > .icon__wrapper--circle {
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);	
 }
 
 .arrow {
@@ -182,6 +211,21 @@
 	display: inline-flex;
 }
 
+.icon__wrapper--circle {
+	border-radius: 50%;
+	padding: 0.5rem;
+	background: #18AFC7;
+	height: 2.25rem;
+  width: 2.25rem;
+  transition: 0.25s ease-in-out;
+}
+
+.icon__wrapper--circle > .arrow.left {
+	margin-left: 0.35rem;
+  margin-bottom: 0.15rem;
+  border-color: white;
+}
+
 .left {
 	-webkit-transform: rotate(135deg);
 	transform: rotate(135deg);
@@ -197,10 +241,20 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-  margin: 10rem auto 0;
+  margin: 2.5em auto 0;
   padding: 3rem 0 0.5rem 0;
   max-width: 60rem;
   border-top: 0.5rem solid #ececec;
+}
+
+.section:nth-child(2) .accordion__title--white--borderless {
+	justify-content: flex-start;
+}
+
+.section--borderless {
+	border-top: 0;
+	padding-top: 1.5rem;
+	margin-top: 0;
 }
 
 .section__description {
