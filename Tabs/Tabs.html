@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tabs</title>
+    <link href="../../../learning-web-components/cssReset.css" rel="stylesheet" type="text/css"/>
+    <link href="../Accordion/accordion.css" rel="stylesheet" type="text/css"/>
+    <link href="Tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../../../projects/Fonts/fontawesome-free-5.0.4/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet" type="text/css"/>
+  </head> 
+  <body>
+  	<section class="section">
+ 			<div class="section__title">Tabs</div>
+ 			<div class="section__description">Ut venenatis volutpat erat, sit amet rhoncus lacus euismod sit amet. Mauris vitae hendrerit purus, ut blandit nisl. Duis tincidunt finibus mauris, sed semper nisi ornare sed. Aliquam sagittis lacinia ante. Donec venenatis magna in metus aliquet varius. Donec ac sagittis sapien. 
+ 			</div>
+ 			<div class="section__sub-title">Horizontal Tabs</div>
+ 			<div class="section__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor odio, dignissim sit amet rhoncus ut.
+ 			</div>
+			<div class="tabComponent clearfix">
+				<input type="radio" name="tab" id="tab1" checked>
+				<label for="tab1" class="first">
+					Tab 1
+					<div class="tab__border-bottom--active"></div>
+				</label>
+				<input type="radio" name="tab" id="tab2">
+				<label for="tab2">
+					Tab 2
+					<div class="tab__border-bottom--active"></div>
+				</label>		
+				<input type="radio" name="tab" id="tab3">
+				<label for="tab3">
+					Tab 3
+					<div class="tab__border-bottom--active"></div>
+				</label>
+				<input type="radio" name="tab" id="tab4">
+				<label for="tab4" class="last">
+					Tab 4
+					<div class="tab__border-bottom--active"></div>
+				</label>
+				<div class="tabContent">
+					<div id="tab1Content" class="clearfix">
+						<div class="tabContent__item">
+							<img src="../Images/cock.jpg">
+						</div>
+						<div class="tabContent__item">
+							<div class="date">November 18, 2017</div>
+							<h2>Rooster on a Brick Wall</h2>
+							<div class="tabContent__item-description">
+								Ut venenatis volutpat erat, sit amet rhoncus lacus euismod sit amet. Mauris vitae hendrerit purus, ut blandit nisl.
+							</div>
+							<div class="tabContent__item-row--last">
+								<button class="button--transparent">Read more...</button>
+							</div>
+						</div>
+					</div>
+					<div id="tab2Content" class="clearfix">
+						<div class="tabContent__item">
+							<img src="../Images/monkey.jpg">
+						</div>
+						<div class="tabContent__item">
+							<div class="date"> October 1, 2017</div>
+							<h2>Monkey perched on a branch</h2>
+							<div class="tabContent__item-description">
+								Ut venenatis volutpat erat, sit amet rhoncus lacus euismod sit amet. Mauris vitae hendrerit purus, ut blandit nisl.
+							</div>
+							<div class="tabContent__item-row--last">
+								<button class="button--transparent">Read more...</button>
+							</div>
+						</div>
+					</div>
+					<div id="tab3Content" class="clearfix">
+						<div class="tabContent__item">
+							<img src="../Images/A.jpg">
+						</div>
+						<div class="tabContent__item">
+							<div class="date">July 14, 2016</div>
+							<h2>The Letter A</h2>
+							<div class="tabContent__item-description">
+								Ut venenatis volutpat erat, sit amet rhoncus lacus euismod sit amet. Mauris vitae hendrerit purus, ut blandit nisl.
+							</div>
+							<div class="tabContent__item-row--last">
+								<button class="button--transparent">Read more...</button>
+							</div>
+						</div>
+					</div>
+					<div id="tab4Content" class="clearfix">
+						<div class="tabContent__item">
+							<img src="../Images/brick.jpg">
+						</div>
+						<div class="tabContent__item">
+							<div class="date">January 30, 2017</div>
+							<h2>Brick among Brick</h2>
+							<div class="tabContent__item-description">
+								Ut venenatis volutpat erat, sit amet rhoncus lacus euismod sit amet. Mauris vitae hendrerit purus, ut blandit nisl.
+							</div>
+							<div class="tabContent__item-row--last">
+								<button class="button--transparent">Read more...</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-divider">
+	  		<div class="codeIcon">
+	  			<div class="arrow left"></div>
+	  			<div class="slash"> / </div>
+	  			<div class="arrow right"></div>
+	  		</div>
+	  		<div class="showMarkup">show markup</div>
+	  	</div>
+		</section>
+		<section class="section">
+			<div class="tabComponent--borderless tabComponent clearfix">
+				<input type="radio" name="tab--underline" id="tab1--underline" checked>
+				<label for="tab1--underline">
+					Tab 1
+					<div class="tab__border-bottom--active"></div>
+				</label>
+				<input type="radio" name="tab--underline" id="tab2--underline">
+				<label for="tab2--underline">
+					Tab 2
+					<div class="tab__border-bottom--active"></div>
+				</label>		
+				<input type="radio" name="tab--underline" id="tab3--underline">
+				<label for="tab3--underline">
+					Tab 3
+					<div class="tab__border-bottom--active"></div>
+				</label>
+				<input type="radio" name="tab--underline" id="tab4--underline">
+				<label for="tab4--underline" class="last">
+					Tab 4
+					<div class="tab__border-bottom--active"></div>
+				</label>
+				<div class="tabContent">
+					<div id="tab1Content--underline" class="clearfix">
+						<div class="tabContent__item">
+							<img src="../Images/cock.jpg">
+						</div>
+						<div class="tabContent__item">
+							<div class="date">November 18, 2017</div>
+							<h2>Rooster on a Brick Wall</h2>
+							<div class="tabContent__item-description">
+								Ut venenatis volutpat erat, sit amet rhoncus lacus euismod sit amet. Mauris vitae hendrerit purus, ut blandit nisl.
+							</div>
+							<div class="tabContent__item-row--last">
+								<button class="button--transparent">Read more...</button>
+							</div>
+						</div>
+					</div>
+					<div id="tab2Content--underline" class="clearfix">
+						<div class="tabContent__item">
+							<img src="../Images/monkey.jpg">
+						</div>
+						<div class="tabContent__item">
+							<div class="date"> October 1, 2017</div>
+							<h2>Monkey perched on a branch</h2>
+							<div class="tabContent__item-description">
+								Ut venenatis volutpat erat, sit amet rhoncus lacus euismod sit amet. Mauris vitae hendrerit purus, ut blandit nisl.
+							</div>
+							<div class="tabContent__item-row--last">
+								<button class="button--transparent">Read more...</button>
+							</div>
+						</div>
+					</div>
+					<div id="tab3Content--underline" class="clearfix">
+						<div class="tabContent__item">
+							<img src="../Images/A.jpg">
+						</div>
+						<div class="tabContent__item">
+							<div class="date">July 14, 2016</div>
+							<h2>The Letter A</h2>
+							<div class="tabContent__item-description">
+								Ut venenatis volutpat erat, sit amet rhoncus lacus euismod sit amet. Mauris vitae hendrerit purus, ut blandit nisl.
+							</div>
+							<div class="tabContent__item-row--last">
+								<button class="button--transparent">Read more...</button>
+							</div>
+						</div>
+					</div>
+					<div id="tab4Content--underline" class="clearfix">
+						<div class="tabContent__item">
+							<img src="../Images/brick.jpg">
+						</div>
+						<div class="tabContent__item">
+							<div class="date">January 30, 2017</div>
+							<h2>Brick among Brick</h2>
+							<div class="tabContent__item-description">
+								Ut venenatis volutpat erat, sit amet rhoncus lacus euismod sit amet. Mauris vitae hendrerit purus, ut blandit nisl.
+							</div>
+							<div class="tabContent__item-row--last">
+								<button class="button--transparent">Read more...</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-divider">
+	  		<div class="codeIcon">
+	  			<div class="arrow left"></div>
+	  			<div class="slash"> / </div>
+	  			<div class="arrow right"></div>
+	  		</div>
+	  		<div class="showMarkup">show markup</div>
+	  	</div>
+		</section>
+  </body>
+</html>
