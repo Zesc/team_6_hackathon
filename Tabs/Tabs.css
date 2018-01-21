@@ -1,0 +1,312 @@
+* {
+	box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Playfair Display Bold";
+  src: url("../../../../../projects/Fonts/Playfair_Display/PlayfairDisplay-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair Display Regular";
+  src: url("../../../../../projects/Fonts/Playfair_Display/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway Bold";
+  src: url("../../../../../projects/Fonts/Raleway/Raleway-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway Light";
+  src: url("../../../../../projects/Fonts/Raleway/Raleway-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway Thin";
+  src: url("../../../../../projects/Fonts/Raleway/Raleway-Thin.ttf") format("truetype");
+}
+
+
+p {
+	font-family: "Playfair Display Regular";
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0.5rem 0;
+}
+
+h2 {
+	padding: 0.5rem 0 1rem;
+	margin-bottom: 0;
+	font-family: "Playfair Display Bold";
+	font-size: 2.05rem;
+	line-height: 2.618rem;
+	color: #177693;
+  letter-spacing: 0.075rem;
+  text-shadow: 0.25rem 0.15rem 0.15rem #e2e2e2;
+}
+
+label {
+	transition: 0.25s ease-in-out;
+}
+
+.button--transparent {
+  background: transparent;
+  font-family: "Raleway Light";
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border: 0.1rem solid black;
+  border-radius: 0.35rem;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.button--transparent:hover {
+	background: #0000000f;
+	box-shadow: 0.15rem 0.25rem 0.5rem #0000002e;
+	cursor: pointer;
+	opacity: 0.75;
+}
+
+.clearfix {
+	zoom: 1; /*IE 6/7*/
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix:after,
+.clearfix:before { 
+ content: "";  
+ display: table;
+}
+
+.date {
+	font-family: "Raleway Bold";
+	font-size: 1.25rem;
+	opacity: 0.75;
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+  margin: 2.5em auto 0;
+  padding: 3rem 0 0.5rem 0;
+  max-width: 60rem;
+  border-top: 0.5rem solid #ececec;
+}
+
+.section__description {
+	width: 100%;
+	font-family: "Raleway Light";
+	font-size: 1.25rem;
+	line-height: 2.25rem;
+	margin-bottom: 2.5rem;
+}
+
+.section__title {
+  flex: 1;
+  width: 100%;
+	font-family: "Playfair Display Bold";
+	font-size: 3rem;
+	line-height: 3.618rem;
+	margin-bottom: 2.5rem;
+}
+
+.section__sub-title {
+  flex: 1;
+  width: 100%;
+	font-family: "Playfair Display Bold";
+	font-size: 1.5rem;
+	line-height: 1.618rem;
+	margin-bottom: 2.5rem;
+}
+
+.tab__border-bottom--active {
+	position: absolute;
+	bottom: -0.15rem;
+	left: 0;
+	right: 0;
+	height: 1rem;
+	border-bottom: 0.15rem solid white;
+}
+
+.tabComponent {
+	width: 85%;
+	max-width: 90rem;
+  box-shadow: -0.25rem 0.5rem 0.75rem #e0e0e0;
+}
+
+.tabComponent label {
+	font-family: "Playfair Display Bold";
+	display: block;
+	float: left;
+	padding: 1.5rem 4.25rem;
+	transition: transform 0.25s ease-in-out;
+	border-top-right-radius: 0.25rem;
+}
+
+.tabComponent label.first {
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
+}
+
+.tabComponent label:hover {
+	cursor: pointer;
+}
+
+.tabComponent input[type="radio"] {
+	display: none;
+}
+
+.tabContent {
+	position: relative;
+	background-color: white;
+	border: 0.05rem solid black;
+  margin-top: 4rem;
+  min-height: 20rem;
+  min-width: 54rem;
+  max-width: 60rem;
+  width: 100%;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  z-index: 1;
+}
+
+.tabContent .tabContent__item {
+	position: relative;
+}
+
+.tabContent .tabContent__item:first-child {
+	float: left;
+	height: 15rem;
+	width: 40%;
+}
+
+.tabContent .tabContent__item:nth-child(2) {
+	float: right;
+	width: 60%;
+	margin-top: 1.5rem;
+}
+
+.tabContent__item img {	
+	position: absolute;
+	margin-top: 1.5rem;
+	height: 80%;
+	width: 90%;
+}
+
+.tabContent__item-description {
+  font-family: "Raleway Light";
+  line-height: 1.618rem;
+  margin-bottom: 0.25rem;
+  opacity: 0.75;
+}
+
+.tabContent__item-row--last {
+	display: flex;
+	justify-content: flex-end;
+	padding: 0.5rem 0;
+}
+
+.tabContent > #tab1Content,
+.tabContent > #tab2Content,
+.tabContent > #tab3Content,
+.tabContent > #tab4Content {
+	display: none;
+	opacity: 0;
+}
+
+#tab1 + label {
+	background: #177693;
+	color: white;
+  height: 4.75rem;
+  margin-top: -0.75rem;
+  padding-top: 2.25rem;
+}
+
+#tab2 + label {
+  margin-top: -0.25rem;
+  height: 4.25rem;
+  padding-top: 1.75rem;
+	background: #3B92AB;
+	color: white;
+}
+
+#tab3 + label {
+	background: #18AFC7;
+	color: white;
+}
+
+#tab4 + label {
+	margin-top: 0.25rem;
+	height: 3.75rem;
+	background: #46BBCE;
+	color: white;
+}
+
+#tab1 + label:hover {
+	margin-top: -0.85rem;
+	height: 5rem;
+	opacity: 0.85;
+}
+
+#tab2 + label:hover {
+	margin-top: -0.45rem;
+	height: 4.85rem;
+	opacity: 0.85;
+}
+
+#tab3 + label:hover {
+	margin-top: -0.05rem;
+	height: 4.05rem;
+	opacity: 0.85;
+}
+
+#tab4 + label:hover {
+	margin-top: 0.15rem;
+	height: 3.85rem;
+	opacity: 0.85;
+}
+
+#tab1:checked ~ .tabContent > #tab1Content,
+#tab2:checked ~ .tabContent > #tab2Content,
+#tab3:checked ~ .tabContent > #tab3Content,
+#tab4:checked ~ .tabContent > #tab4Content {
+	position: relative;
+	display: block;
+	opacity: 1;
+	padding: 2.5rem;
+}
+
+#tab1:checked + label > .tab__border-bottom--active {
+	left: 0.05rem;
+}
+
+#tab1:checked + label,
+#tab2:checked + label,
+#tab3:checked + label,
+#tab4:checked + label {
+	position: relative;
+  background-color: white;
+  color: black;
+  height: 4.5rem;
+  margin-top: -0.5rem;
+  padding-top: 2rem;
+  border: 0.05rem solid black;
+  border-top-left-radius: 0.25rem;
+	border-bottom: 0;
+  box-shadow: 0rem -0.25rem 0.25rem #f1f1f1;
+  z-index: 2;
+}
+
+#tab1:checked + label:hover,
+#tab2:checked + label:hover,
+#tab3:checked + label:hover,
+#tab4:checked + label:hover {
+	opacity: 1;
+}
