@@ -162,6 +162,39 @@ label {
 	display: none;
 }
 
+.tabComponent--borderless {
+	box-shadow: none;
+	border-bottom: 0.35rem solid #18AFC7;
+  border-radius: 0;
+}
+
+.tabComponent--borderless .tabContent {
+	border: 0;
+	margin-top: 3rem;
+}
+
+.tabComponent--borderless label {
+	position: relative;
+  border: 0;
+  box-shadow: none;
+  padding: 0.75rem 0;
+  height: 3rem;
+  width: 10.75rem;
+  margin-right: 0.5rem;
+  background: white;
+  color: #808080a1;
+  font-size: 1.25rem;
+  z-index: 2;
+}
+
+.tabComponent--borderless label:hover {
+	color: #909090;
+}
+
+.tabComponent--borderless label:hover > .tab__border-bottom--active {
+	background-color: #909090;
+}
+
 .tabContent {
 	position: relative;
 	background-color: white;
@@ -216,6 +249,14 @@ label {
 .tabContent > #tab2Content,
 .tabContent > #tab3Content,
 .tabContent > #tab4Content {
+	display: none;
+	opacity: 0;
+}
+
+.tabContent > #tab1Content--underline,
+.tabContent > #tab2Content--underline,
+.tabContent > #tab3Content--underline,
+.tabContent > #tab4Content--underline {
 	display: none;
 	opacity: 0;
 }
@@ -286,6 +327,11 @@ label {
 	left: 0.05rem;
 }
 
+#tab3:checked ~ .tabContent > #tab3Content .tabContent__item > img {
+	width: 50%;
+  margin-left: 20%;
+}
+
 #tab1:checked + label,
 #tab2:checked + label,
 #tab3:checked + label,
@@ -307,5 +353,43 @@ label {
 #tab2:checked + label:hover,
 #tab3:checked + label:hover,
 #tab4:checked + label:hover {
+	opacity: 1;
+}
+
+#tab1--underline:checked ~ .tabContent > #tab1Content--underline,
+#tab2--underline:checked ~ .tabContent > #tab2Content--underline,
+#tab3--underline:checked ~ .tabContent > #tab3Content--underline,
+#tab4--underline:checked ~ .tabContent > #tab4Content--underline {
+	position: relative;
+	display: block;
+	opacity: 1;
+	padding: 2.5rem;
+}
+
+#tab3--underline:checked ~ .tabContent > #tab3Content--underline .tabContent__item > img {
+	width: 50%;
+  margin-left: 20%;
+}
+
+input[name="tab--underline"] + label > .tab__border-bottom--active {
+	background: #808080a1;
+	border: 0;
+  height: 0.35rem;
+}
+
+input[name="tab--underline"]:checked + label {
+	color: black;
+}	
+
+input[name="tab--underline"]:checked + label > .tab__border-bottom--active {
+	background: #18AFC7;
+	border: 0;
+  height: 0.35rem;
+}	
+
+#tab1--underline:checked + label:hover,
+#tab2--underline:checked + label:hover,
+#tab3--underline:checked + label:hover,
+#tab4--underline:checked + label:hover {
 	opacity: 1;
 }

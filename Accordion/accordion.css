@@ -34,6 +34,8 @@
 	display: flex;
 	flex-direction: row;
 	max-height: 0;
+	border-right: 0.05rem solid black;
+	border-left: 0.05rem solid black;
 	opacity: 0;
 	-webkit-transition: 0.25s ease-in-out;
 	-moz-transition: 0.25s ease-in-out;
@@ -107,6 +109,10 @@
 	border-color: #0000002e;	
 }
 
+.accordion__title--white--borderless + .accordion__panel {
+	border: 0;
+}
+
 .accordion__title-text {
 	margin-right: 1.5rem;
 }
@@ -153,7 +159,6 @@
 	max-height: 18rem;
 	padding: 2.5rem 6rem;
 	opacity: 1;
-	transform: scale(1,1);
 }
 
 .accordion input[type="checkbox"]:checked + .accordion__title > .arrow.left {
@@ -245,6 +250,10 @@
   padding: 3rem 0 0.5rem 0;
   max-width: 60rem;
   border-top: 0.5rem solid #ececec;
+}
+
+.section:first-child .accordion > .accordion__item:last-child .accordion__panel {
+	border-bottom: 0.05rem solid black;
 }
 
 .section:nth-child(2) .accordion__title--white--borderless {
