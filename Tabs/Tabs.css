@@ -86,7 +86,7 @@ label {
 .date {
 	font-family: "Raleway Bold";
 	font-size: 1.25rem;
-	opacity: 0.75;
+	opacity: 0.5;
 }
 
 .section {
@@ -126,13 +126,18 @@ label {
 	margin-bottom: 2.5rem;
 }
 
-.tab__border-bottom--active {
+.tab__border-bottom {
 	position: absolute;
 	bottom: -0.15rem;
 	left: 0;
 	right: 0;
 	height: 1rem;
 	border-bottom: 0.15rem solid white;
+}
+
+.tab__title--skew {
+	display: inline-block;
+	transform: skewX(-15deg);
 }
 
 .tabComponent {
@@ -191,8 +196,30 @@ label {
 	color: #909090;
 }
 
-.tabComponent--borderless label:hover > .tab__border-bottom--active {
+.tabComponent--borderless label:hover > .tab__border-bottom {
 	background-color: #909090;
+}
+
+.tabComponent--skew {
+	box-shadow: none;
+}
+
+.tabComponent--skew label {
+	position: relative;
+	border: 0.1rem solid #ABC0C8;
+  border-bottom: 0;
+  border-left: 0;
+  border-top-right-radius: 0.25rem;
+  color: #ABC0C8;
+  margin: 1rem 0 0 1.25rem;
+  padding: 1.15rem 4.25rem;
+  transform: skewX(15deg);
+}
+
+.tabComponent--skew .tabContent {
+	border: 0;
+	border-right: 0.05rem solid #18AFC7;
+  border-bottom: 0.05rem solid #18AFC7;	
 }
 
 .tabContent {
@@ -261,6 +288,15 @@ label {
 	opacity: 0;
 }
 
+.tabContent > #tab1Content--skew,
+.tabContent > #tab2Content--skew,
+.tabContent > #tab3Content--skew,
+.tabContent > #tab4Content--skew {
+	display: none;
+	opacity: 0;
+}
+
+
 #tab1 + label {
 	background: #177693;
 	color: white;
@@ -323,7 +359,7 @@ label {
 	padding: 2.5rem;
 }
 
-#tab1:checked + label > .tab__border-bottom--active {
+#tab1:checked + label > .tab__border-bottom {
 	left: 0.05rem;
 }
 
@@ -356,6 +392,49 @@ label {
 	opacity: 1;
 }
 
+/****************************************************************/
+
+#tab1--skew:checked ~ .tabContent > #tab1Content--skew,
+#tab2--skew:checked ~ .tabContent > #tab2Content--skew,
+#tab3--skew:checked ~ .tabContent > #tab3Content--skew,
+#tab4--skew:checked ~ .tabContent > #tab4Content--skew {
+	position: relative;
+	display: block;
+	opacity: 1;
+	padding: 2.5rem;
+}
+
+#tab3--skew:checked ~ .tabContent > #tab3Content--skew .tabContent__item > img {
+	width: 50%;
+  margin-left: 20%;
+}
+
+input[name="tab--skew"] + label > .tab__border-bottom {
+	background: #808080a1;
+	border: 0;
+  height: 0.35rem;
+}
+
+input[name="tab--skew"]:checked + label {
+	color: #177D9A;
+  border-color: #177D9A;
+}	
+
+input[name="tab--skew"]:checked + label > .tab__border-bottom {
+	background: #18AFC7;
+	border: 0;
+  height: 0.35rem;
+}	
+
+#tab1--skew:checked + label:hover,
+#tab2--skew:checked + label:hover,
+#tab3--skew:checked + label:hover,
+#tab4--skew:checked + label:hover {
+	opacity: 1;
+}
+
+/****************************************************************/
+
 #tab1--underline:checked ~ .tabContent > #tab1Content--underline,
 #tab2--underline:checked ~ .tabContent > #tab2Content--underline,
 #tab3--underline:checked ~ .tabContent > #tab3Content--underline,
@@ -371,7 +450,7 @@ label {
   margin-left: 20%;
 }
 
-input[name="tab--underline"] + label > .tab__border-bottom--active {
+input[name="tab--underline"] + label > .tab__border-bottom {
 	background: #808080a1;
 	border: 0;
   height: 0.35rem;
@@ -381,7 +460,7 @@ input[name="tab--underline"]:checked + label {
 	color: black;
 }	
 
-input[name="tab--underline"]:checked + label > .tab__border-bottom--active {
+input[name="tab--underline"]:checked + label > .tab__border-bottom {
 	background: #18AFC7;
 	border: 0;
   height: 0.35rem;
