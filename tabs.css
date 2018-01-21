@@ -14,8 +14,33 @@ body{
 
 #container{
     width: 800px;
-    /* height: 5000px; */
+  padding: 20px 0;
     /* background-color: red; */
+}
+
+#container > p, body > p{
+    padding: 30px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.markup{
+    display: flex;
+    justify-content: space-between;
+    color: rgba(0, 0, 0, .5);
+}
+
+.right, .left{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.right{
+    text-align: right;
+}
+
+.left{
+    text-align: left;
 }
   
 .nav{
@@ -27,18 +52,18 @@ body{
 }
 
 
-.horizontal{
+/* .horizontal{
     justify-content: flex-start;
-}
+} */
 
-.nav-tabs {
+.horizontal-nav-tabs {
     z-index: 2;
     margin-bottom: -2px;
     /* border-bottom: 1px solid grey; */
     
 }
 
-.nav-tabs .nav-link {
+.horizontal-nav-tabs .nav-link {
     /* border: 1px solid red; */
     border-top-right-radius: 4px;   
     display: block;
@@ -51,7 +76,7 @@ body{
     font-family: sans-serif;
 }
 
-.nav-tabs .nav-link.active{
+.horizontal-nav-tabs .nav-link.active{
     border-top-left-radius: 4px;
     background-color: #fff;
     border-color: grey;
@@ -170,4 +195,151 @@ img{
     font-size: 16px;
     font-weight: bold;
     color: rgba(0, 0, 0, .8)
+}
+
+
+.horizontal-nav-tabs .horizontal-underline-nav-link {
+    display: block;
+    width: 150px;
+    padding-bottom: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-bottom:3px solid grey;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.horizontal-nav-tabs .horizontal-underline-nav-link.active{
+    background-color: #fff;
+    border-bottom:3px solid rgba(23, 118, 147, 1);
+    color: grey;
+    margin-left: 5px;
+    margin-right: 5px;
+   
+}
+
+.clear-border{
+    border:none;
+}
+
+.border-bottom-like-underline-active{
+    border-bottom:3px solid rgba(23, 118, 147, 1);
+}
+
+.vertical-tab-container{
+    width: 840px; 
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.vertical-tab-container > .vertical-nav-tabs{
+    width: 168px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    z-index: 2;
+    margin-right: -2px;
+    /* flex-wrap: wrap; */
+    /* border: 1px solid blue; */
+
+}
+
+.vertical-nav-tabs > .vertical-nav-item{
+    width: 100%;
+       /* border: 1px solid green; */
+       /* height: 55px; */
+}
+
+.vertical-nav-tabs  .vertical-pills-nav-link{
+    display: block;
+    /* width: 168px; */
+    height: 55px;
+    text-align: right;
+    /* vertical-align: middle; */
+    padding-top: 15px;
+    padding-right: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-bottom-left-radius: 4px;
+    /* border: 1px solid green; */
+}
+
+.vertical-tab-container > .tab-content{
+    width: 672px;
+    z-index: -1;
+    /* border: 1px solid green; */
+}
+
+
+.vertical-nav-tabs  .vertical-pills-nav-link.active{
+    border-top-left-radius: 4px;
+    background-color: #fff;
+    border-color: grey;
+    border: 1px solid grey;
+    border-right: none;
+    color: grey;
+    /* margin-bottom: -2px; */
+}
+
+.v-tab1{
+    /* padding-top: 23px; */
+}
+
+.v-tab2{
+    /* padding-top: 20px;
+    margin-top: 4px; */
+    width: 95%;
+    margin-left: 5%;
+    background-color: rgba(23, 118, 147, 1);
+}
+
+.v-tab3{
+    /* padding-top: 17px;
+    margin-top: 7px; */
+    width: 90%;
+    margin-left: 10%;
+    background-color: rgba(23, 118, 147, .8);
+}
+
+.v-tab4{
+    /* padding-top: 14px;
+    margin-top: 10px; */
+    width: 85%;
+    margin-left: 15%;
+    background-color: rgba(23, 118, 147, .6);
+} 
+
+.vertical-nav-tabs .vertical-underline-nav-link {
+    display: block;
+    width: 108px;
+    height: 55px;
+    text-align: right;
+    /* vertical-align: middle; */
+    padding-top: 25px;
+    padding-right: 25px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, .2);
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-left: 60px;
+    /* margin-right: 5px; */
+    border-bottom:3px solid rgba(0, 0, 0, .2);
+}
+
+.vertical-nav-tabs .vertical-underline-nav-link.active{
+    background-color: #fff;
+    width: 168px;
+    border-bottom:3px solid rgba(23, 118, 147, 1);
+    color: grey;
+    text-align: left;
+    margin-left: 0;
+    /* margin-right: 5px; */
+   
 }
