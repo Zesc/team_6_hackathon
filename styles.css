@@ -2,6 +2,12 @@ body {
 	margin: 0;
 }
 
+
+@font-face {
+  font-family: "Playfair Display Regular";
+  src: url("../../../../projects/Fonts/Playfair_Display/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
 .title-container {
 	position: realtive;
 	width: 100%;
@@ -21,11 +27,14 @@ body {
 }
 
 .wrapper {
+	position: relative;
 	width: 100%;
 	overflow: hidden;
 }
 
 .left-container {
+	position: absolute;
+	height: 100%;
 	background-color: #3b424c;
 	margin: 0;
 	position: relative;
@@ -63,5 +72,13 @@ body {
 .right-container {
 	background-color: white;
 	width: 78%;
-	float: left;
+	float: right;
+}
+
+.right-container > .section:first-child {
+ 	border-top: 0;
+}
+ 
+.right-container .accordion__item {
+ 	font-family: "Playfair Display Regular";
 }

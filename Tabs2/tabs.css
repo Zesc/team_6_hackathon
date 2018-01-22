@@ -273,7 +273,7 @@ img{
 
 .vertical-tab-container > .tab-content{
     width: 672px;
-    z-index: -1;
+    z-index: 1;
     /* border: 1px solid green; */
 }
 

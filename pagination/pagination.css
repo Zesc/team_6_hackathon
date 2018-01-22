@@ -1,13 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Ubuntu", sans-serif;
-}
-
 .c-pagination {
 	position: relative;
 	margin: 10%;
+	font-family: "Ubuntu", sans-serif;
 }
 
 .c-pagination h1, .c-pagination p, .c-pagination > .c-pagination-container {

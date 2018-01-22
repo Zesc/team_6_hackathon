@@ -27,25 +27,6 @@
   src: url("../../../../../projects/Fonts/Raleway/Raleway-Thin.ttf") format("truetype");
 }
 
-
-p {
-	font-family: "Playfair Display Regular";
-	font-size: 1rem;
-	font-weight: 600;
-	margin: 0.5rem 0;
-}
-
-h2 {
-	padding: 0.5rem 0 1rem;
-	margin-bottom: 0;
-	font-family: "Playfair Display Bold";
-	font-size: 2.05rem;
-	line-height: 2.618rem;
-	color: #177693;
-  letter-spacing: 0.075rem;
-  text-shadow: 0.25rem 0.15rem 0.15rem #e2e2e2;
-}
-
 label {
 	transition: 0.25s ease-in-out;
 }
@@ -59,6 +40,10 @@ label {
   border: 0.1rem solid black;
   border-radius: 0.35rem;
   outline: none;
+  width: auto;
+  height: auto;
+  margin: 0;
+  color: black;
   transition: 0.3s ease-in-out;
 }
 
@@ -143,6 +128,24 @@ label {
 .tabComponent {
 	max-width: 90rem;
   box-shadow: -0.25rem 0.5rem 0.75rem #e0e0e0;
+}
+
+.tabComponent p {
+	font-family: "Playfair Display Regular";
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0.5rem 0;
+}
+
+.tabComponent  h2 {
+	padding: 0.5rem 0 1rem;
+	margin-bottom: 0;
+	font-family: "Playfair Display Bold";
+	font-size: 2.05rem;
+	line-height: 2.618rem;
+	color: #177693;
+  letter-spacing: 0.075rem;
+  text-shadow: 0.25rem 0.15rem 0.15rem #e2e2e2;
 }
 
 .tabComponent label {

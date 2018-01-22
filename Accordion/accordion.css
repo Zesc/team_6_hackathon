@@ -79,6 +79,7 @@
 }
 
 .accordion__panel-text {
+	font-family: "Raleway Light";
 	line-height: 1.85rem;
 }
 
@@ -245,9 +246,9 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-  margin: 2.5em auto 0;
-  padding: 3rem 0 0.5rem 0;
+	align-items: flex-start;
+  margin: 4em auto 0;
+  padding: 4rem 0 0.5rem 0;
   max-width: 60rem;
   border-top: 0.5rem solid #ececec;
 }
