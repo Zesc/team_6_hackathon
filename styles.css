@@ -82,3 +82,7 @@ body {
 .right-container .accordion__item {
  	font-family: "Playfair Display Regular";
 }
+
+#accordions .accordion > .accordion__item:last-child .accordion__panel {
+	border-bottom: 0.05rem solid black;
+}

@@ -75,6 +75,7 @@
 
 .accordion__panel-item img {
 	height: 0;
+	width: auto;
 	box-shadow: 0.15rem 0.15rem 0.65rem #a5a5a5;	
 }
 
