@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.c-pagination {
+	position: relative;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+.c-pagination h1, .c-pagination p, .c-pagination > .c-pagination-container {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.c-pagination-container ul {
+	margin-top: 1%;
+}
+
+/*round*/
+.c-pagination-container ul li.r-number {
+	display: inline-block;
+	padding: 6px 10px;
+	border-radius: 50%;
+	border: 1.5px solid #177d9a;
+	font-size: 13px;
+}
+
+.c-pagination-container ul li.r-number a {
+	color: #177D9A;
+	text-decoration: none;
+}
+
+.c-pagination-container ul li.r-number:hover {
+	background-color: rgba(23, 125, 154, 0.7);
+	border: 1.5px solid transparent;
+	padding: 6px 10px;
+	transition: .3s background-color, .3s border;
+}
+
+.c-pagination-container ul li.r-active{
+	display: inline-block;
+	padding: 6px 10px;
+	border-radius: 50%;
+	border: 1.5px solid #177D9A;
+	background-color: #177D9A;
+	color: white;
+	font-size: 13px;
+}
+
+.c-pagination-container ul li.r-active a {
+	text-decoration: none;
+	color: white;
+}
+
+.c-pagination-container ul li.r-arrow {
+	display: inline-block;
+	padding: 6px 10px;
+	border-radius: 50%;
+	border: 1.5px solid transparent;
+	color: #177D9A;
+}
+
+.c-pagination-container ul li.r-arrow a {
+	color: #177D9A;
+}
+
+.c-pagination-container ul li.r-arrow:hover {
+	border: 1.5px solid rgba(23, 125, 154, 0.5);
+	padding: 6px 10px;
+	transition: .3s border;
+}
+
+/*simple*/
+.c-pagination-container ul li.s-number {
+	display: inline-block;
+	padding: 6px 11.5px;
+	font-size: 13px;
+	color: #abaeb2;
+}
+
+.c-pagination-container ul li.s-number:hover {
+	color: rgba(23, 125, 154, 0.7);
+	padding: 6px 11.5px;
+	transition: .3s color;
+}
+
+.c-pagination-container ul li.s-active {
+	display: inline-block;
+	padding: 6px 11.5px;
+	font-size: 13px;
+	color: #177D9A
+}
+
+.c-pagination-container ul li.s-arrow {
+	display: inline-block;
+	padding:6px 11.5px;
+	color: #177D9A;
+}
+
+.c-pagination-container ul li.s-arrow a {
+	color: #177D9A;
+}
+
+.c-pagination-container ul li.s-number a{
+	text-decoration: none;
+	color: #abaeb2;
+} 	
+
+.c-pagination-container ul li.s-active a{
+	text-decoration: none;
+	color: #177d9a;
+}
+
+.c-pagination-container ul li.s-number a:hover{
+	color: rgba(23, 125, 154, 0.5);
+}
+
+/* square */
+.c-pagination-container ul li.q-number {
+	display: inline-block;
+	padding: 6px 10px;
+	font-size: 13px;
+	color: #abaeb2;
+	border: 1.5px solid #177D9A;
+}
+
+.c-pagination-container ul li.q-number a {
+	text-decoration: none;
+	color: #177D9A;
+}
+
+.c-pagination-container ul li.q-number:hover {
+	background: rgba(23, 125, 154, 0.7);
+	border: 1.5px solid transparent;
+	transition: .3s background, .3s border;
+}
+
+.c-pagination-container ul li.q-active {
+	display: inline-block;
+	padding: 6px 10px;
+	font-size: 13px;
+	border: 1.5px solid transparent;
+	background: #177D9A;
+}
+
+.c-pagination-container ul li.q-active a {
+	text-decoration: none;
+	color: white;
+}
+
+.c-pagination-container ul li.q-arrow {
+	display: inline-block;
+	padding:6px 10px;
+}
+
+.c-pagination-container ul li.q-arrow a{
+	color: #177d9a;
+}
