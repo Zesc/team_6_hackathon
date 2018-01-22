@@ -1,1 +1,88 @@
+body {
+	margin: 0;
+}
 
+
+@font-face {
+  font-family: "Playfair Display Regular";
+  src: url("../../../../projects/Fonts/Playfair_Display/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+.title-container {
+	position: realtive;
+	width: 100%;
+	background: #262b33;
+}
+
+.title-container h1 {
+	color: #697d9e;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 4%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	font-size: 2.5rem;
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.left-container {
+	position: absolute;
+	height: 100%;
+	background-color: #3b424c;
+	margin: 0;
+	position: relative;
+	height: 1000px;
+	width: 22%;
+	font-family: 'Roboto', sans-serif;
+	float: left;
+}
+
+.left-container h2 {
+	margin-top: 0;
+	padding-top: 20%;
+	padding-right: 15%;
+	color: white;
+	text-align: right;
+
+}
+
+.left-container p {
+	text-align: right;
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.left-container p a {
+	text-decoration: none;
+	color: #2c95b7;
+	padding-right: 15%;
+	padding-top: 4%;
+	padding-bottom: 4%;
+	border-right: 5px solid #2c95b7;
+}
+
+.right-container {
+	background-color: white;
+	width: 78%;
+	float: right;
+}
+
+.right-container > .section:first-child {
+ 	border-top: 0;
+}
+ 
+.right-container .accordion__item {
+ 	font-family: "Playfair Display Regular";
+}
+
+#accordions .accordion > .accordion__item:last-child .accordion__panel {
+	border-bottom: 0.05rem solid black;
+}

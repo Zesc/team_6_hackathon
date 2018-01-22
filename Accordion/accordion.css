@@ -1,0 +1,301 @@
+* {
+	box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Playfair Display Bold";
+  src: url("../../../../../projects/Fonts/Playfair_Display/PlayfairDisplay-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair Display Regular";
+  src: url("../../../../../projects/Fonts/Playfair_Display/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway Light";
+  src: url("../../../../../projects/Fonts/Raleway/Raleway-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway Thin";
+  src: url("../../../../../projects/Fonts/Raleway/Raleway-Thin.ttf") format("truetype");
+}
+
+.accordion {
+	max-width: 60rem;
+}
+
+.accordion__item {
+	position: relative;
+}
+
+.accordion__panel {
+	display: flex;
+	flex-direction: row;
+	max-height: 0;
+	border-right: 0.05rem solid black;
+	border-left: 0.05rem solid black;
+	opacity: 0;
+	-webkit-transition: 0.25s ease-in-out;
+	-moz-transition: 0.25s ease-in-out;
+	-ms-transition: 0.25s ease-in-out;
+	-o-transition: 0.25s ease-in-out;
+	transition: 0.25s ease-in-out;
+}
+
+.accordion__panel * {
+	opacity: 0;
+	transition: 0.25s ease-in-out;
+}
+
+.accordion__panel--black {
+	background: black;
+	color: white;
+}
+
+.accordion__panel--black .accordion__panel-header {
+	color: #18AFC7;
+}
+
+.accordion__panel-header {
+	font-family: "Playfair Display Bold";
+  font-size: 1.85rem;
+  line-height: 2rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem; 
+}
+
+.accordion__panel-item {
+	flex: 1;
+	font-family: "Raleway Light";
+	font-size: 1.15rem;
+	line-height: 1.618rem;
+}
+
+.accordion__panel-item img {
+	height: 0;
+	width: auto;
+	box-shadow: 0.15rem 0.15rem 0.65rem #a5a5a5;	
+}
+
+.accordion__panel-text {
+	font-family: "Raleway Light";
+	line-height: 1.85rem;
+}
+
+.accordion__title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: "Playfair Display Regular";
+	font-size: 1.35rem;
+	line-height: 1.618rem;
+	padding: 1.25rem 2rem;
+	background: black;
+	border-bottom: 0.05rem groove white;
+	color: white;
+	-webkit-transition: 0.25s ease-in-out;
+	-moz-transition: 0.25s ease-in-out;
+	-ms-transition: 0.25s ease-in-out;
+	-o-transition: 0.25s ease-in-out;
+	transition: 0.25s ease-in-out;
+}
+
+.accordion__title--white--borderless {
+	background: white;
+	color: black;
+}
+
+.accordion__title--white--borderless .arrow.left {
+	border-color: #0000002e;	
+}
+
+.accordion__title--white--borderless + .accordion__panel {
+	border: 0;
+}
+
+.accordion__title-text {
+	margin-right: 1.5rem;
+}
+
+.accordion input[type="checkbox"] {
+	-webkit-appearance: none;
+	position: absolute;
+	height: 100%;
+  width: 100%;
+	opacity: 0;
+  margin: 0;
+  max-height: 4.25rem;
+  z-index: 1;
+}
+
+.accordion input[type="checkbox"]:hover {
+	cursor: pointer;
+}
+
+.accordion input[type="checkbox"]:hover + .accordion__title {
+	background: #000000b3;
+}
+
+.accordion input[type="checkbox"]:hover + .accordion__title--white--borderless {
+	background: #0000001a;
+}
+
+.accordion input[type="checkbox"]:checked + .accordion__title  + .accordion__panel * {
+	opacity: 1;
+}
+
+.accordion input[type="checkbox"]:checked + .accordion__title  + .accordion__panel .accordion__panel-item img {
+	height: 100%;
+}
+
+.accordion input[type="checkbox"]:checked + .accordion__title {
+	border-bottom: 0.25rem solid #18AFC7;
+}
+
+.accordion input[type="checkbox"]:checked + .accordion__title + .accordion__panel {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	max-height: 18rem;
+	padding: 2.5rem 6rem;
+	opacity: 1;
+}
+
+.accordion input[type="checkbox"]:checked + .accordion__title > .arrow.left {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.accordion input[type="checkbox"]:checked + .accordion__title > .icon__wrapper--circle {
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);	
+}
+
+.arrow {
+	height: 1rem;
+	width: 1rem;
+	border: solid white;
+  border-width: 0 0.15rem 0.15rem 0;
+  display: inline-block;
+  padding: 0.15rem;
+  transition: 0.25s ease-in-out;
+}
+
+.bottom-divider {
+	position: relative;
+	line-height: 1.75rem;
+	margin: 3.5rem 0 2.5rem;
+	width: 100%;
+	padding: 0.75rem 0;
+  padding-top: 0;
+  border-bottom: 0.15rem solid #c3c3c3;
+}
+
+.bottom-divider > * {
+	cursor: pointer;
+}
+
+.bottom-divider > *:hover {
+	opacity: 0.85;
+}
+
+.bottom-divider .arrow {
+	border-color: #969696;
+	padding: 0;
+}
+
+.bottom-divider .arrow.left {
+	margin-right: -0.15rem;
+}
+
+.bottom-divider .arrow.right {
+	margin-left: -0.15rem;
+}
+
+.codeIcon {
+	display: inline-flex;
+}
+
+.icon__wrapper--circle {
+	border-radius: 50%;
+	padding: 0.5rem;
+	background: #18AFC7;
+	height: 2.25rem;
+  width: 2.25rem;
+  transition: 0.25s ease-in-out;
+}
+
+.icon__wrapper--circle > .arrow.left {
+	margin-left: 0.35rem;
+  margin-bottom: 0.15rem;
+  border-color: white;
+}
+
+.left {
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+
+.right {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+  margin: 4em auto 0;
+  padding: 4rem 0 0.5rem 0;
+  max-width: 60rem;
+  border-top: 0.5rem solid #ececec;
+}
+
+.section:first-child .accordion > .accordion__item:last-child .accordion__panel {
+	border-bottom: 0.05rem solid black;
+}
+
+.section:nth-child(2) .accordion__title--white--borderless {
+	justify-content: flex-start;
+}
+
+.section--borderless {
+	border-top: 0;
+	padding-top: 1.5rem;
+	margin-top: 0;
+}
+
+.section__description {
+	font-family: "Raleway Light";
+	font-size: 1.25rem;
+	line-height: 2.25rem;
+	margin-bottom: 2.5rem;
+}
+
+.section__title {
+  flex: 1;
+  width: 100%;
+	font-family: "Playfair Display Bold";
+	font-size: 3rem;
+	line-height: 3.618rem;
+	margin-bottom: 2.5rem;
+}
+
+.showMarkup {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-family: "Playfair Display Regular";
+	font-size: 1.25rem;
+	color: #5f5f5f;
+}
+
+.slash {
+  font-size: 2rem;
+  margin-top: -0.4rem;
+  color: #969696;
+  font-weight: 800;
+}
