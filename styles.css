@@ -20,19 +20,24 @@ body {
 	font-size: 2.5rem;
 }
 
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+}
+
 .left-container {
 	background-color: #3b424c;
 	margin: 0;
 	position: relative;
-	float: left;
-	height: 500px;
+	height: 1000px;
 	width: 22%;
 	font-family: 'Roboto', sans-serif;
+	float: left;
 }
 
 .left-container h2 {
 	margin-top: 0;
-	padding-top: 4%;
+	padding-top: 20%;
 	padding-right: 15%;
 	color: white;
 	text-align: right;
@@ -56,7 +61,7 @@ body {
 }
 
 .right-container {
-	position: relative;
-	float:left;
 	background-color: white;
+	width: 78%;
+	float: left;
 }
