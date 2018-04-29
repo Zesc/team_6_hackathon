@@ -7,10 +7,10 @@
 	<link href="Accordion/accordion.css" rel="stylesheet" type="text/css" />
 	<link href="buttons/buttons_styles.css" rel="stylesheet" type="text/css" />
 	<link href="cards/cards_styles.css" rel="stylesheet" type="text/css" />
-	<link href="article_teaser/article_styles.css" rel="stylesheet" type="text/css" />
 	<link href="Tabs/Tabs.css" rel="stylesheet" type="text/css" />
 	<link href="Tabs2/tabs.css" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+	<link href="article_teaser/article_styles.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="pagination/pagination.css">
 	<script src="https://use.fontawesome.com/22ee5fc5a4.js"></script>
 	<title>UI Components</title>
@@ -159,24 +159,44 @@
 					</div>
 
 					<div id="article_content">
-						<div id="article_left">
-							<img src="cards/img/scenery.jpg" alt="Scenery" id="cards_img">
-							<img src="cards/img/girl.jpg" alt="Girl" id="cards_content_img">
-							<div id="name_and_title">
+						<div class="article_teaser">
+							<div class="teaser-header">
+								<!-- <img src="article_teaser/img/europe.jpg" alt="Scenery"> -->
+							</div>
+							<div class="teaser-body">
+								<div class="teaser-body-date">
+									<p>April 3, 2017</p>
+								</div>
+								<div class="teaser-body-content">
+									<div class="teaser-body-content-title">
+										<p>Europe on $50 a day</p>
+									</div>
+									<div class="teaser-body-content-content">
+										<p>
+											Our budget friendly guides reveal their best kept secrets and tips for experiencing seven amazing cities on a shoestring.
+										</p>
+									</div>
+
+								</div>
+								<div class="teaser-body-more">
+									<button class="read-more-btn">Read more...</button>
+								</div>
+
+
+							</div>
+							<!-- <img src="cards/img/scenery.jpg" alt="Scenery" id="cards_img"> -->
+							<!-- <img src="cards/img/girl.jpg" alt="Girl" id="cards_content_img"> -->
+							<!-- <div id="name_and_title">
 								<h2 style="color: #177693">Jennifer Smith</h2>
 								<h5 style="color: #ABC0C8; line-height: 30px">Full Stack Developer</h5>
 							</div>
 							<br />
-							<hr style="margin: 0 auto; width: 170px; height: 3px; background-color: #ABC0C8; " />
+							<hr style="margin: 0 auto; width: 170px; height: 3px; background-color: #ABC0C8; " /> -->
 
-							<div id="article_content_icons">
-								<img src="cards/img/mail-icon.png" class="icon_images" />
-								<img src="cards/img/github-icon.png" class="icon_images" />
-								<img src="cards/img/facebook-icon.png" class="icon_images" />
-							</div>
+
 						</div>
 
-						<div id="article_right">
+						<div class="article_description">
 							<h2>Article teaser</h2>
 							<br />
 							<p>Vivamus vulputate nunc diam, vitae iaculis velit venenatis vitae. Ut felis tellus, volutpat ac porta ut, luctus ut
