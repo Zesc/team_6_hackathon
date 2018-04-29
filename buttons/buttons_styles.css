@@ -11,10 +11,7 @@
 
 button {
   font-size: 1em;
-  width: 100px;
-  height: 40px;
-  margin-right: 20px;
-  margin-top: 20px;
+  padding: 10px 25px;
   color: #177693;
   border-radius: 3px;
   border: 2px solid #177693;
@@ -38,7 +35,12 @@ h3 {
 }
 
 table {
+  padding-top: 20px;
   padding-bottom: 20px;
+}
+
+th {
+  padding: 0 10px;
 }
 
 td {
@@ -49,13 +51,6 @@ td {
 
 #button_caption {
   color: #ADADAD;
-}
-
-hr {
-    border: 0;
-    height: 3px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
-
 }
 
 p {
@@ -72,9 +67,6 @@ p {
 }
 
 #send_icon {
-  float: left;
-  margin-left: 15px;
-  margin-top: 3px;
 }
 
 #send_text {
@@ -83,22 +75,8 @@ p {
   margin-left: 3px;
 }
 
-#add_user_icon {
-  float: left;
-  margin-left: 5px;
-  margin-top: 5px;
-}
-
-#add_user_text {
-  float: left;
-  margin-left: 2px;
-  margin-top: 5px;
-}
-
 #settings_icon {
-  float: left;
-  margin-left: 5px;
-  margin-top: 5px;
+
 }
 
 #settings_text {
@@ -110,3 +88,4 @@ p {
 #add_user_icon, #settings_icon{
   filter: brightness(0) invert(1);
 }
+
