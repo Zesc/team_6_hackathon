@@ -44,9 +44,7 @@ th {
 }
 
 td {
-  padding-top: 10px;
   text-align: center;
-  padding-right: 20px; 
 }
 
 #button_caption {
@@ -89,3 +87,42 @@ p {
   filter: brightness(0) invert(1);
 }
 
+/* rounded buttons*/
+.btn-rounded {
+  border-radius: 50px;
+}
+
+/*Group buttons*/
+#first {
+  border-radius: 5px 0 0 5px;
+}
+
+#first-rounded {
+  border-radius: 50px 0 0 50px;
+}
+
+#normal {
+  border-radius: 0;
+}
+
+#last {
+  border-radius: 0 5px 5px 0;
+}
+
+#last-rounded {
+  border-radius: 0 50px 50px 0;
+}
+
+#first, #normal, #first-rounded, #last-rounded {
+  margin-right: -5px;
+}
+
+#button_caption td {
+  text-align: center;
+  padding: 0 32px;
+}
+
+.btn-group tr td div{
+  display: inline-block;
+  padding: 0 30px;
+}
