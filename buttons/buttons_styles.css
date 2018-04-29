@@ -119,10 +119,27 @@ p {
 
 #button_caption td {
   text-align: center;
-  padding: 0 32px;
+  padding: 0 15px;
 }
 
 .btn-group tr td div{
   display: inline-block;
   padding: 0 30px;
+}
+
+.btn-normal {
+  color: #18AFC7;
+  border: 2px solid #18AFC7;
+}
+
+.btn-hover {
+  color: white;
+  background-color: #18AFC7;
+  border: 2px solid #18AFC7;
+}
+
+.btn-active {
+  color: white;
+  background-color: #177693;
+  border: 2px solid #177693;
 }
