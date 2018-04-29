@@ -88,7 +88,9 @@ p {
 .article_description {
   width: 600px;
   text-align: left;
-  padding: 150px 20px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
 }
 
 .read-more-btn{
