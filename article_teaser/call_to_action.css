@@ -1,0 +1,116 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+  }
+  
+  /* p {
+    display: block;
+    line-height: 30px;
+  } */
+  
+  #article_content {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: solid 1px #177693; */
+  }
+  
+  .call-to-action {
+    width: 300px;
+    height: 300px;
+    /* float: left; */
+    border: solid 1px #177693;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+  
+  }
+  
+  .call-to-action-header{
+    height: 25%;
+    width: 100%;
+    /* background-image: url("img/europe.jpg"); */
+    /* border: solid 1px #177693; */
+    background-color: #177693;
+    padding: 0 10px;
+  }
+  
+  .call-to-action-body{
+    height: 75%;
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3% 3%;
+    /* border-color: #177693; */
+    /* border: 1px solid; */
+    /* border-top: none; */
+  }
+  
+  .call-to-action-body-title{
+    width: 100%;
+    height: 20%;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-left: 10px;
+    /* border: solid 1px #177693; */
+  }
+  
+  
+  .call-to-action-body-content{
+    width: 100%;
+    height: 35%;
+    font-size: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: solid 1px #177693; */
+  }  
+  
+  .call-to-action-body-options{
+    width: 100%;
+    height: 20%;
+    /* margin-top: 20px; */
+    display: flex;
+    justify-content: space-around;
+    /* border: solid 1px #177693; */
+  }
+  
+  .call-to-action-description {
+    width: 600px;
+    text-align: left;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    /* border: solid 1px #177693; */
+  }
+  
+  .option-btn{
+    background-color: transparent;
+    padding: 0 0;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .ok-option-btn{
+    /* border: 1px solid #177693; */
+    color: #177693;
+    margin-top: 5px;
+    /* display: inline-block; */
+  }
+
+  .nope-option-btn{
+    border: 1px solid gray;
+    color: gray;
+    margin-top: 5px;
+    /* display: inline-block; */
+  }
+
+  
+  
+  
+  
