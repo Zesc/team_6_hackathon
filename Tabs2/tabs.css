@@ -135,6 +135,7 @@ body{
 
 .tab-pane div.image{   
     width: 35%;
+    height: 100%;
     /* border: 2px solid blue; */
 }
 
