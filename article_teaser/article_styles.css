@@ -19,7 +19,7 @@ p {
 .article_teaser {
   width: 300px;
   height: 450px;
-  /* float: left; */
+  flex: 1;
   border: solid 1px #177693;
   border-radius: 5px;
   /* border-top-left-radius: 5px;
@@ -90,6 +90,7 @@ p {
   text-align: left;
   padding: 0px 20px;
   display: flex;
+  flex: 2;
   align-items: center;
 }
 

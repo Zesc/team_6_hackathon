@@ -1,22 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <script src="https://use.fontawesome.com/22ee5fc5a4.js"></script>
-  <link rel="stylesheet" href="carousel.css" />
-  <title>Carousels Component</title>
-</head>
-<body>
-	<div class="c-carousel-container">
-		<h1>Carousel</h1>
-		<p>Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur.</p>
-		<div class="c-carousel-1">
-			<ol>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ol>
-		</div>
-	</div>
-</body>
+	<head>
+	  <link href="../cssReset.css" rel="stylesheet" type="text/css"/>
+	  <link href="../Base/base.css" rel="stylesheet" type="text/css"/>
+	  <link href="../Fonts/fonts.css" rel="stylesheet" type="text/css"/>
+	  <link href="carousel.css" rel="stylesheet" type="text/css"/>
+	  <title>Carousels Component</title>
+	</head>
+	<body>
+		<section class="section">
+			<div class="section__title">Carousel</div>
+			<div class="section__description">Ut venenatis volutpat erat, sit amet rhoncus lacus euismod sit amet. Mauris vitae hendrerit purus, ut blandit nisl. Duis tincidunt finibus mauris, sed semper nisi ornare sed. Aliquam sagittis lacinia ante. Donec venenatis magna in metus aliquet varius. Donec ac sagittis sapien. 
+			</div>
+			<div class="section__sub-title">Basic Carousel</div>
+			<div class="section__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor odio, dignissim sit amet rhoncus ut.
+			</div>
+	    <div class="carousel__wrapper">
+	      <div class="carousel">
+	        <input type="radio" id="carousel__radio-1" name="carousel-radio" checked>
+	        <input type="radio" id="carousel__radio-2" name="carousel-radio">
+	        <input type="radio" id="carousel__radio-3" name="carousel-radio">
+	        <div class="carousel__controls">
+	          <label for="carousel__radio-3" class="carousel__control carousel__control--previous"></label>
+	          <label for="carousel__radio-2" class="carousel__control carousel__control--next"></label>
+	        </div>
+	        <div class="carousel__controls">
+	          <label for="carousel__radio-1" class="carousel__control carousel__control--previous"></label>
+	          <label for="carousel__radio-3" class="carousel__control carousel__control--next"></label>
+	        </div>
+	        <div class="carousel__controls">
+	          <label for="carousel__radio-2" class="carousel__control carousel__control--previous"></label>
+	          <label for="carousel__radio-1" class="carousel__control carousel__control--next"></label>
+	        </div>
+	        <div class="carousel__items">
+	          <div class="carousel__item"><h1>A</h1></div>
+	          <div class="carousel__item"><h1>B</h1></div>
+	          <div class="carousel__item"><h1>C</h1></div>
+	        </div>
+	        <div class="carousel__navigation--bottom">
+	          <label for="carousel__radio-1" class="carousel__navigation"></label>
+	          <label for="carousel__radio-2" class="carousel__navigation"></label>
+	          <label for="carousel__radio-3" class="carousel__navigation"></label>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="bottom-divider">
+	  		<div class="codeIcon">
+	  			<div class="arrow left"></div>
+	  			<div class="slash"> / </div>
+	  			<div class="arrow right"></div>
+	  		</div>
+	  		<div class="showMarkup">show markup</div>
+	  	</div>
+	  </section>
+	</body>
 </html>
