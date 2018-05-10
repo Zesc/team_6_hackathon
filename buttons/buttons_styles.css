@@ -1,25 +1,25 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 .container {
   width: 100%;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Roboto Light;
 }
 
 button {
   font-size: 1em;
-  padding: 10px 25px;
+  padding: 10px 20px;
   color: #177693;
   border-radius: 3px;
   border: 2px solid #177693;
   outline: none;
 }
 
-h3 {
-  margin-top: 20px;
+h2 {
+  font-size: 1.7em;
+  font-family: "Roboto Bold";
+  margin-bottom: 1em;
 }
 
 #hover, #hover2{
@@ -34,9 +34,8 @@ h3 {
   border: #177693;
 }
 
-table {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.container table {
+  margin-top: 20px;
 }
 
 th {
@@ -57,11 +56,11 @@ p {
 }
 
 #disabled {
-    background-color: #ABC0C8;
-    color: white;
-    border: #ABC0C8;
-    opacity: 0.6;
-    cursor: not-allowed;
+  background-color: #ABC0C8;
+  color: white;
+  border: #ABC0C8;
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 #send_icon {
@@ -83,63 +82,82 @@ p {
   margin-top: 5px;
 }
 
-#add_user_icon, #settings_icon{
-  filter: brightness(0) invert(1);
+/* rounded buttons by Cesar V.*/
+.btn-round-container{
+ width: 100%;
 }
 
-/* rounded buttons*/
-.btn-rounded {
-  border-radius: 50px;
+.btn {
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 0 10px;
+  color: #177693;
+  border-radius: 3px;
+  border: 2px solid #177693;
+  outline: none;
 }
 
-/*Group buttons*/
-#first {
-  border-radius: 5px 0 0 5px;
+.btn-round {
+  border-radius: 25px;
 }
 
-#first-rounded {
-  border-radius: 50px 0 0 50px;
-}
-
-#normal {
-  border-radius: 0;
-}
-
-#last {
-  border-radius: 0 5px 5px 0;
-}
-
-#last-rounded {
-  border-radius: 0 50px 50px 0;
-}
-
-#first, #normal, #first-rounded, #last-rounded {
-  margin-right: -5px;
-}
-
-#button_caption td {
-  text-align: center;
-  padding: 0 15px;
-}
-
-.btn-group tr td div{
-  display: inline-block;
-  padding: 0 30px;
-}
-
-.btn-normal {
-  color: #18AFC7;
-  border: 2px solid #18AFC7;
+.btn-round i{
+  margin-right: 5px;
 }
 
 .btn-hover {
   color: white;
   background-color: #18AFC7;
-  border: 2px solid #18AFC7;
+  border: 2px solid #18AFC7
 }
 
 .btn-active {
   color: white;
   background-color: #177693;
   border: 2px solid #177693;
+}
+
+.btn-disabled {
+  background-color: #ABC0C8;
+  color: white;
+  border: #ABC0C8;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* group button by Cesar V.*/
+.btn-group-container {}
+
+.btn-group {
+  float: left;
+}
+
+.btn-group-round {
+  float: right;
+}
+
+.btn-group > button {
+  margin: 0 -2px;
+  border-radius: 0;
+}
+
+.btn-group > button:nth-child(2), .btn-group > button:nth-child(3) {
+  border-right: 0;
+  border-left: 0;
+}
+
+.btn-group > button:first-child {
+  border-right: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.btn-group > button:last-child {
+  border-left: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.btn-group-round > button {
+  margin: 0 -2px;
 }
