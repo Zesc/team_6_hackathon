@@ -126,7 +126,9 @@ p {
 }
 
 /* group button by Cesar V.*/
-.btn-group-container {}
+.btn-group-container {
+  margin-bottom: 9em;
+}
 
 .btn-group {
   float: left;
@@ -136,12 +138,13 @@ p {
   float: right;
 }
 
-.btn-group > button {
+.btn-group > button, .btn-group-round > button {
   margin: 0 -2px;
   border-radius: 0;
 }
 
-.btn-group > button:nth-child(2), .btn-group > button:nth-child(3) {
+.btn-group > button:nth-child(2), .btn-group > button:nth-child(3),
+.btn-group-round > button:nth-child(2), .btn-group-round > button:nth-child(3) {
   border-right: 0;
   border-left: 0;
 }
@@ -152,10 +155,37 @@ p {
   border-bottom-left-radius: 3px;
 }
 
+.btn-group-round > button:first-child {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
 .btn-group > button:last-child {
   border-left: 0;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+}
+
+.btn-group-round > button:last-child {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.btn-normal-1 {
+  color: white;
+  background-color: #177693;
+  border: 2px solid #177693;
+}
+
+.btn-active-1 {
+  color: white;
+  background-color: #18AFC7;
+  border: 2px solid #18AFC7}
+
+.btn-hover-1 {
+  color: #fff;
+  border: 2px solid #000;
+  background-color: #000;
 }
 
 .btn-group-round > button {
