@@ -2,10 +2,9 @@
 <html>
   <head>
     <title>Tabs</title>
-    <link href="../../../learning-web-components/cssReset.css" rel="stylesheet" type="text/css"/>
+    <link href="../../learning-web-components/cssReset.css" rel="stylesheet" type="text/css"/>
     <link href="../Base/base.css" rel="stylesheet" type="text/css"/>
-    <link href="Tabs.css" rel="stylesheet" type="text/css"/>
-    <link href="../../../../../projects/Fonts/fontawesome-free-5.0.4/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet" type="text/css"/>
+    <link href="Tabs_JS.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
   	<section class="section">
@@ -16,24 +15,20 @@
  			<div class="section__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor odio, dignissim sit amet rhoncus ut.
  			</div>
 			<div class="tabComponent clearfix">
-				<input type="radio" name="tab" id="tab1" checked>
-				<label for="tab1" class="first">
-					Tab 1
+				<label id="tab1" class="first active">
+			    <a class="tab" href="#tab1Content">Tab 1</a>
 					<div class="tab__border-bottom"></div>
 				</label>
-				<input type="radio" name="tab" id="tab2">
-				<label for="tab2">
-					Tab 2
+				<label id="tab2">
+					<a class="tab" href="#tab2Content">Tab 2</a>
 					<div class="tab__border-bottom"></div>
 				</label>
-				<input type="radio" name="tab" id="tab3">
-				<label for="tab3">
-					Tab 3
+				<label id="tab3">
+					<a class="tab" href="#tab3Content">Tab 3</a>
 					<div class="tab__border-bottom"></div>
 				</label>
-				<input type="radio" name="tab" id="tab4">
-				<label for="tab4" class="last">
-					Tab 4
+				<label id="tab4" class="last">
+					<a class="tab" href="#tab4Content">Tab 4</a>
 					<div class="tab__border-bottom"></div>
 				</label>
 				<div class="tabContent">
@@ -110,24 +105,20 @@
 		</section>
 		<section class="section">
 			<div class="tabComponent--borderless tabComponent clearfix">
-				<input type="radio" name="tab--underline" id="tab1--underline" checked>
-				<label for="tab1--underline">
-					Tab 1
+				<label class="active">
+					<a class="tab" href="#tab1Content--underline">Tab 1</a>
 					<div class="tab__border-bottom"></div>
 				</label>
-				<input type="radio" name="tab--underline" id="tab2--underline">
-				<label for="tab2--underline">
-					Tab 2
+				<label>
+					<a class="tab" href="#tab2Content--underline">Tab 2</a>
 					<div class="tab__border-bottom"></div>
 				</label>
-				<input type="radio" name="tab--underline" id="tab3--underline">
-				<label for="tab3--underline">
-					Tab 3
+				<label>
+					<a class="tab" href="#tab3Content--underline">Tab 3</a>
 					<div class="tab__border-bottom"></div>
 				</label>
-				<input type="radio" name="tab--underline" id="tab4--underline">
-				<label for="tab4--underline" class="last">
-					Tab 4
+				<label class="last">
+					<a class="tab" href="#tab4Content--underline">Tab 4</a>
 					<div class="tab__border-bottom"></div>
 				</label>
 				<div class="tabContent">
@@ -219,6 +210,7 @@
 				<input type="radio" name="tab--skew" id="tab4--skew">
 				<label for="tab4--skew" class="last">
 					<span class="tab__title--skew">Tab 4</span>
+					<div class="tab__border-bottom--active"></div>
 				</label>
 				<div class="tabContent">
 					<div id="tab1Content--skew" class="clearfix">
@@ -292,5 +284,6 @@
 	  		<div class="showMarkup">show markup</div>
 	  	</div>
 		</section>
+    <script src="Tabs_JS.js"></script>
   </body>
 </html>

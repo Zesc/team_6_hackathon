@@ -1,3 +1,4 @@
+@import "../Fonts/fonts.css";
 
 .accordion {
 	max-width: 60rem;
@@ -14,18 +15,22 @@
 	border-right: 0.05rem solid black;
 	border-left: 0.05rem solid black;
 	opacity: 0;
-	-webkit-transition: 0.25s ease-in-out;
-	-moz-transition: 0.25s ease-in-out;
-	-ms-transition: 0.25s ease-in-out;
-	-o-transition: 0.25s ease-in-out;
-	transition: 0.25s ease-in-out;
+	-webkit-transition: 0.25s all ease-in-out;
+	-moz-transition: 0.25s all ease-in-out;
+	-ms-transition: 0.25s all ease-in-out;
+	-o-transition: 0.25s all ease-in-out;
+	transition: 0.25s all ease-in-out;
 }
 
 .accordion__panel * {
 	opacity: 0;
-	transition: 0.25s ease-in-out;
+	transition: 0.25s opacity ease-in-out;
 }
-
+/*
+.accordion__title.active + accordion__panel * {
+	opacity: 1;
+}
+*/
 .accordion__panel > .accordion__panel-item:nth-child(2) {
 	margin-left: 1.5rem;
 }
@@ -44,12 +49,12 @@
   font-size: 1.85rem;
   line-height: 2rem;
   padding-bottom: 0.5rem;
-  margin-bottom: 0.5rem; 
+  margin-bottom: 0.5rem;
 }
 
 .accordion__panel-item {
 	flex: 1;
-	font-family: "Raleway Light";
+	font-family: "Roboto Light";
 	font-size: 1.15rem;
 	line-height: 1.618rem;
 }
@@ -57,11 +62,10 @@
 .accordion__panel-item img {
 	height: 0;
 	width: auto;
-	box-shadow: 0.15rem 0.15rem 0.65rem #a5a5a5;	
+	box-shadow: 0.15rem 0.15rem 0.65rem #a5a5a5;
 }
 
 .accordion__panel-text {
-	font-family: "Raleway Light";
 	line-height: 1.85rem;
 }
 
@@ -83,13 +87,26 @@
 	transition: 0.25s ease-in-out;
 }
 
+.accordion__title:hover {
+	cursor: pointer;
+}
+
+.accordion__title.active + .accordion__panel {
+	max-height: 18rem;
+	padding: 2.5rem 6rem;
+}
+
+.accordion__title.active + .accordion__panel * {
+	opacity: 1;
+}
+
 .accordion__title--white--borderless {
 	background: white;
 	color: black;
 }
 
 .accordion__title--white--borderless .arrow.left {
-	border-color: #0000002e;	
+	border-color: #0000002e;
 }
 
 .accordion__title--white--borderless + .accordion__panel {
@@ -99,7 +116,7 @@
 .accordion__title-text {
 	margin-right: 1.5rem;
 }
-
+/*
 .accordion input[type="checkbox"] {
 	-webkit-appearance: none;
 	position: absolute;
@@ -123,6 +140,7 @@
 	background: #0000001a;
 }
 
+/*
 .accordion input[type="checkbox"]:checked + .accordion__title + .accordion__panel {
 	max-height: 18rem;
 	padding: 2.5rem 6rem;
@@ -148,5 +166,6 @@
 
 .accordion input[type="checkbox"]:checked + .accordion__title > .icon__wrapper--circle {
 	-webkit-transform: rotate(-90deg);
-	transform: rotate(-90deg);	
+	transform: rotate(-90deg);
 }
+*/

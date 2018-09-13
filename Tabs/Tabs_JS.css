@@ -74,7 +74,7 @@ label {
 	margin: 0.5rem 0;
 }
 
-.tabComponent  h2 {
+.tabComponent h2 {
 	padding: 0.5rem 0 1rem;
 	margin-bottom: 0;
 	font-family: "Playfair Display Bold";
@@ -87,12 +87,22 @@ label {
 
 .tabComponent label {
 	position: relative;
-	font-family: "Playfair Display Bold";
-	display: block;
 	float: left;
-	padding: 1.5rem 4.25rem;
 	transition: transform 0.25s ease-in-out;
 	border-top-right-radius: 0.25rem;
+}
+
+.tabComponent label .tab {
+  display: flex;
+  align-items: center;
+	height: 100%;
+  font-family: "Playfair Display Bold";
+  text-decoration: none;
+}
+
+.section:first-child .tabComponent label .tab {
+	color: white;
+	padding: 1.75rem 4.25rem 1.25rem;
 }
 
 .tabComponent label.first {
@@ -120,25 +130,41 @@ label {
 }
 
 .tabComponent--borderless label {
-	position: relative;
-  border: 0;
-  box-shadow: none;
-  padding: 0.75rem 0;
-  height: 3rem;
-  width: 10.75rem;
-  margin-right: 0.5rem;
-  background: white;
-  color: #808080a1;
-  font-size: 1.25rem;
+	margin-right: 0.5rem;
   z-index: 2;
 }
 
-.tabComponent--borderless label:hover {
+.tabComponent--borderless label .tab {
+	border: 0;
+  box-shadow: none;
+  padding: 0.75rem 0;
+  width: 10.75rem;
+  background: white;
+  color: #808080a1;
+  font-size: 1.25rem;
+}
+
+.tabComponent--borderless label .tab__border-bottom {
+	background-color: #808080a1;
+	border: 0;
+	height: 0.3rem;
+}
+
+.tabComponent--borderless label:hover .tab {
 	color: #909090;
 }
 
-.tabComponent--borderless label:hover > .tab__border-bottom {
+.tabComponent--borderless label:hover .tab__border-bottom {
 	background-color: #909090;
+}
+
+.tabComponent--borderless label.active .tab {
+	color: black;
+}
+
+.tabComponent--borderless label.active > .tab__border-bottom,
+.tabComponent--borderless label.active:hover > .tab__border-bottom {
+	background-color: #18AFC7;
 }
 
 .tabComponent--skew {
@@ -213,124 +239,116 @@ label {
 	padding: 0.5rem 0;
 }
 
-.tabContent > #tab1Content,
-.tabContent > #tab2Content,
-.tabContent > #tab3Content,
-.tabContent > #tab4Content {
-	display: none;
-	opacity: 0;
-}
-
-.tabContent > #tab1Content--underline,
-.tabContent > #tab2Content--underline,
-.tabContent > #tab3Content--underline,
-.tabContent > #tab4Content--underline {
-	display: none;
-	opacity: 0;
-}
-
-.tabContent > #tab1Content--skew,
-.tabContent > #tab2Content--skew,
-.tabContent > #tab3Content--skew,
-.tabContent > #tab4Content--skew {
-	display: none;
-	opacity: 0;
-}
-
-
-#tab1 + label {
+#tab1 {
 	background: #177693;
 	color: white;
   height: 4.75rem;
   margin-top: -0.75rem;
-  padding-top: 2.25rem;
 }
 
-#tab2 + label {
+#tab2 {
   margin-top: -0.25rem;
   height: 4.25rem;
-  padding-top: 1.75rem;
 	background: #3B92AB;
 	color: white;
 }
 
-#tab3 + label {
+#tab3 {
+	height: 4rem;
 	background: #18AFC7;
 	color: white;
 }
 
-#tab4 + label {
+#tab4 {
 	margin-top: 0.25rem;
 	height: 3.75rem;
 	background: #46BBCE;
 	color: white;
 }
 
-#tab1 + label:hover {
+#tab1:hover {
 	margin-top: -0.85rem;
 	height: 5rem;
 	opacity: 0.85;
 }
 
-#tab2 + label:hover {
+#tab2:hover {
 	margin-top: -0.45rem;
 	height: 4.85rem;
 	opacity: 0.85;
 }
 
-#tab3 + label:hover {
+#tab3:hover {
 	margin-top: -0.05rem;
 	height: 4.05rem;
 	opacity: 0.85;
 }
 
-#tab4 + label:hover {
+#tab4:hover {
 	margin-top: 0.15rem;
 	height: 3.85rem;
 	opacity: 0.85;
 }
 
-#tab1:checked ~ .tabContent > #tab1Content,
-#tab2:checked ~ .tabContent > #tab2Content,
-#tab3:checked ~ .tabContent > #tab3Content,
-#tab4:checked ~ .tabContent > #tab4Content {
-	position: relative;
-	display: block;
-	opacity: 1;
-	padding: 2.5rem;
-}
-
-#tab1:checked + label > .tab__border-bottom {
-	left: 0.05rem;
-}
-
-#tab3:checked ~ .tabContent > #tab3Content .tabContent__item > img {
-	width: 50%;
-  margin-left: 20%;
-}
-
-#tab1:checked + label,
-#tab2:checked + label,
-#tab3:checked + label,
-#tab4:checked + label {
-	position: relative;
+#tab1.active,
+#tab2.active,
+#tab3.active,
+#tab4.active,
+#tab1.active:hover,
+#tab2.active:hover,
+#tab3.active:hover,
+#tab4.active:hover {
   background-color: white;
-  color: black;
   height: 4.5rem;
   margin-top: -0.5rem;
-  padding-top: 2rem;
   border: 0.05rem solid black;
   border-top-left-radius: 0.25rem;
 	border-bottom: 0;
   box-shadow: 0rem -0.25rem 0.25rem #f1f1f1;
   z-index: 2;
+	opacity: 1;
 }
 
-#tab1:checked + label:hover,
-#tab2:checked + label:hover,
-#tab3:checked + label:hover,
-#tab4:checked + label:hover {
+#tab1.active .tab,
+#tab2.active .tab,
+#tab3.active .tab,
+#tab4.active .tab {
+	color: black;
+}
+
+.tabContent > div {
+	display: none;
+	position: absolute;
+	opacity: 0;
+	padding: 2.5rem;
+}
+
+.section .tabContent > div:first-child {
+	display: flex;
 	opacity: 1;
+}
+
+/*#tab1.active a,
+#tab2.active a,
+#tab3.active a,
+#tab4.active a {
+	color: black;
+}*/
+
+/*
+#tab1.active ~ .tabContent > #tab1Content,
+#tab2.active ~ .tabContent > #tab2Content,
+#tab3.active ~ .tabContent > #tab3Content,
+#tab4.active ~ .tabContent > #tab4Content {
+	display: block;
+	position: absolute;
+	opacity: 1;
+	padding: 2.5rem;
+}
+*/
+#tab3.active ~ .tabContent > #tab3Content .tabContent__item > img {
+	width: 50%;
+  margin-left: 20%;
 }
 
 /****************************************************************/
