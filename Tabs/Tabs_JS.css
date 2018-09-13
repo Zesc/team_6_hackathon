@@ -105,7 +105,7 @@ label {
 	padding: 1.75rem 4.25rem 1.25rem;
 }
 
-.tabComponent label.first {
+..section:first-child .tabComponent label.first {
 	border-top-left-radius: 0.25rem;
 	border-top-right-radius: 0.25rem;
 }
@@ -177,10 +177,22 @@ label {
   border-bottom: 0;
   border-left: 0;
   border-top-right-radius: 0.25rem;
-  color: #ABC0C8;
   margin: 1rem 0 0 1.25rem;
-  padding: 1.15rem 4.25rem;
   transform: skewX(15deg);
+}
+
+.tabComponent--skew label .tab {
+	color: #ABC0C8;
+	padding: 1.15rem 4.25rem;
+	transform: skewX(0deg);
+}
+
+.tabComponent--skew label.active {
+	border-color: #177D9A;
+}
+
+.tabComponent--skew label.active .tab {
+	color: #177D9A;
 }
 
 .tabComponent--skew .tabContent {
