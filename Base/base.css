@@ -96,10 +96,10 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
   margin: 4em 10% 0;
   padding: 4rem 0 0.5rem 0;
-  border-top: 0.5rem solid #ececec;
+  border-top: 0.05rem solid #ececec;
 }
 
 .section__sub-title {
@@ -138,7 +138,7 @@
 	font-family: "Playfair Display Bold";
 	font-size: 3rem;
 	line-height: 3.618rem;
-	margin-bottom: 2.5rem;
+	margin-top: 1.5rem;
 }
 
 .showMarkup {

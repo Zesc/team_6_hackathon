@@ -78,7 +78,7 @@ label {
 	padding: 0.5rem 0 1rem;
 	margin-bottom: 0;
 	font-family: "Playfair Display Bold";
-	font-size: 2.05rem;
+	font-size: 2.5rem;
 	line-height: 2.618rem;
 	color: #177693;
   letter-spacing: 0.075rem;
@@ -110,7 +110,7 @@ label {
 	border-top-right-radius: 0.25rem;
 }
 
-.tabComponent label:hover {
+.tabComponent label a:hover {
 	cursor: pointer;
 }
 
@@ -127,6 +127,7 @@ label {
 .tabComponent--borderless .tabContent {
 	border: 0;
 	margin-top: 3rem;
+	border-radius: 0;
 }
 
 .tabComponent--borderless label {
@@ -206,8 +207,6 @@ label {
 	background-color: white;
 	border: 0.05rem solid black;
   margin-top: 4rem;
-  min-height: 20rem;
-  min-width: 54rem;
   max-width: 60rem;
   width: 100%;
   border-bottom-left-radius: 0.25rem;
@@ -240,9 +239,24 @@ label {
 
 .tabContent__item-description {
   font-family: "Roboto Light";
+	font-size: 1.25rem;
   line-height: 1.618rem;
   margin-bottom: 0.25rem;
   opacity: 0.75;
+}
+
+.tabContent__item-description > span:not(:first-child) {
+	display: inline-block;
+	margin-top: 1rem;
+	font-size: 1rem;
+}
+
+.tabContent__item-title {
+	font-family: "Inconsolata Regular";
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .tabContent__item-row--last {
@@ -335,10 +349,11 @@ label {
 	padding: 2.5rem;
 }
 
-.section .tabContent > div:first-child {
+/*.section .tabContent > div:first-child {
 	display: flex;
+	flex-direction: column;
 	opacity: 1;
-}
+}*/
 
 /*#tab1.active a,
 #tab2.active a,

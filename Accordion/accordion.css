@@ -23,16 +23,11 @@
 }
 
 .accordion__panel * {
-	opacity: 0;
 	transition: 0.25s opacity ease-in-out;
 }
-/*
-.accordion__title.active + accordion__panel * {
-	opacity: 1;
-}
-*/
+
 .accordion__panel > .accordion__panel-item:nth-child(2) {
-	margin-left: 1.5rem;
+	padding-left: 1.5rem;
 }
 
 .accordion__panel--black {
@@ -60,9 +55,8 @@
 }
 
 .accordion__panel-item img {
-	height: 0;
-	width: auto;
-	box-shadow: 0.15rem 0.15rem 0.65rem #a5a5a5;
+	width: 100%;
+	height: auto;
 }
 
 .accordion__panel-text {
@@ -89,11 +83,17 @@
 
 .accordion__title:hover {
 	cursor: pointer;
+	background: #4a4a4a;
+}
+
+.accordion__title.active {
+	background: #4a4a4a;
 }
 
 .accordion__title.active + .accordion__panel {
-	max-height: 18rem;
-	padding: 2.5rem 6rem;
+	max-height: 60rem;
+	padding: 2.5rem 1rem;
+	opacity: 1;
 }
 
 .accordion__title.active + .accordion__panel * {
@@ -103,6 +103,12 @@
 .accordion__title--white--borderless {
 	background: white;
 	color: black;
+}
+
+.accordion__title--white--borderless:hover,
+.accordion__title--white--borderless.active {
+	background: white;
+	box-shadow: inset -0.25rem -0.25rem 0.25rem #F1F1F0, inset 0.25rem 0.25rem 0.75rem #f1f1f1;
 }
 
 .accordion__title--white--borderless .arrow.left {
@@ -151,7 +157,7 @@
 	opacity: 1;
 }
 
-.accordion input[type="checkbox"]:checked + .accordion__title  + .accordion__panel .accordion__panel-item img {
+.accordion input[type="checkbox"]:checked + .accordion__title  + .accordion__panel  {
 	height: 100%;
 }
 
